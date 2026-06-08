@@ -1,0 +1,29 @@
+---
+name: example-skill-name
+title: Human Readable Skill Title
+description: One precise sentence describing when this skill should be used.
+triggers: ["specific phrase", "tool name", "project name", "user intent"]
+category: example-category
+tags: ["optional", "routing", "keywords"]
+related_skills: []
+---
+
+# Human Readable Skill Title
+
+Use this skill when...
+
+## Do not use when
+
+- The user is asking for...
+- Another more specific skill applies...
+
+## Workflow
+
+1. Step one.
+2. Step two.
+3. Verify the result.
+
+## Pitfalls
+
+- Known issue or false positive.
+- Known command/path/API caveat.
