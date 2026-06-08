@@ -95,6 +95,25 @@ python3 scripts/skill_index.py watch
 
 Use `.skill-router-ignore` to exclude backup, temporary, or third-party directories from scanning.
 
+## OpenClaw compatibility
+
+OpenClaw users can use this project in two ways:
+
+1. If OpenClaw supports local skill files, file-based indexes, and bootstrap/system instructions, point it to `references/skill-index.json` and use `templates/bootstrap-system-prompt.md` as the preflight routing instruction.
+2. If migrating OpenClaw data into Hermes Agent, run the Hermes OpenClaw migration first:
+
+```bash
+hermes claw migrate
+```
+
+Then install `skill-router`:
+
+```bash
+./scripts/install_router.sh
+```
+
+Native OpenClaw automatic skill-loading behavior may differ from Hermes Agent, so verify that OpenClaw can read the generated index before relying on automatic routing.
+
 ## Notes
 
 This skill improves routing quality, but it cannot fully compensate for vague skill metadata. For best results, each skill should include precise `description`, `triggers`, `category`, and anti-trigger guidance.
