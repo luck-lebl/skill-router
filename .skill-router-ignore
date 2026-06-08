@@ -1,0 +1,10 @@
+# Ignore patterns for skill-router scanning.
+# Glob syntax is supported.
+
+**/.git/**
+**/__pycache__/**
+**/node_modules/**
+**/.venv/**
+**/venv/**
+**/*backup*/**
+**/*bak*/**
