@@ -170,6 +170,22 @@ Every skill intended to route well should include:
 - clear “Use this skill when...” section
 - clear anti-triggers or “Do not use when...” section for overlapping domains
 
+## OpenClaw compatibility
+
+OpenClaw users may reuse this router if their agent runtime can read local skill files, read `references/skill-index.json`, and follow bootstrap/system instructions. For Hermes migrations from OpenClaw, migrate first:
+
+```bash
+hermes claw migrate
+```
+
+Then install or refresh this router with:
+
+```bash
+./scripts/install_router.sh
+```
+
+Do not assume native OpenClaw automatic skill-loading is identical to Hermes Agent; verify index loading in the target runtime.
+
 ## Repository files
 
 - `scripts/skill_index.py`: scans installed skills and builds/searches the index.
